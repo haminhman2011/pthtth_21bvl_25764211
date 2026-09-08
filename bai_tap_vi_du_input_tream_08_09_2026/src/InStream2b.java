@@ -1,3 +1,6 @@
+/**
+ * author: manha.vn
+ */
 import static java.lang.Thread.*;   // để gọi sleep() trực tiếp
 
 import java.io.IOException;
