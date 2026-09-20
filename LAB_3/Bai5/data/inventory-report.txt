@@ -1,0 +1,10 @@
+===== BÁO CÁO TỒN KHO =====
+Số sản phẩm: 3
+Tổng giá trị tồn kho: 10,700,000 VND
+
+Chi tiết:
+SP01   | Ban phim co     | đơn giá    350,000 | SL  10 | tồn kho    3,500,000 VND
+SP04   | Bàn phím cơ     | đơn giá    800,000 | SL   4 | tồn kho    3,200,000 VND
+SP05   | Man hinh        | đơn giá  2,000,000 | SL   2 | tồn kho    4,000,000 VND
+
+Sản phẩm có giá trị tồn kho cao nhất: SP05 - Man hinh (4,000,000 VND)
