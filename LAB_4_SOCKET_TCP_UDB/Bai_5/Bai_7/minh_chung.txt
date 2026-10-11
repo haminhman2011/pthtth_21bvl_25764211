@@ -1,0 +1,23 @@
+Log server tại cổng 59620; logs: C:\Users\HAMINH~1\AppData\Local\Temp\bai7_logs_gfij0zg5\data\logs
+Reject missing HELLO and invalid IDs; no files created [PASS]
+UTF-8, HET, empty content, escaped tabs, exact QUIT; timestamp and remote verified [PASS]
+
+Actual log entries:
+2026-10-11T16:19:01.8993404+07:00	/127.0.0.1:59621	Xin chào Việt Nam
+2026-10-11T16:19:01.9083439+07:00	/127.0.0.1:59621	HET
+2026-10-11T16:19:01.9093442+07:00	/127.0.0.1:59621	nội dung có HET ở giữa
+2026-10-11T16:19:01.9103427+07:00	/127.0.0.1:59621	
+2026-10-11T16:19:01.9123395+07:00	/127.0.0.1:59621	A\tB\\C
+2026-10-11T16:19:01.9123395+07:00	/127.0.0.1:59621	QUIT nằm trong nội dung
+4 concurrent connections sharing one ID: 200 intact entries, no loss [PASS]
+Abrupt disconnect keeps saved log; reconnect appends instead of overwriting [PASS]
+File write failure returns ERR LOG_WRITE; server continues [PASS]
+
+Actual LogClient session [PASS]:
+Gửi HELLO <clientId> trước, sau đó nhập nội dung. Nhập QUIT để kết thúc.
+Server: OK HELLO demo
+Server: OK LOGGED
+Server: OK LOGGED
+Server: BYE
+
+PASS: all logging checks.

@@ -1,0 +1,50 @@
+
+=== TCP ===
+TCP server đang lắng nghe tại cổng 61881
+TCP: Nhập DATE, TIME, DATETIME hoặc QUIT:
+Client sends: 'DATE'
+Server: 11 10 2026
+Client sends: 'TIME'
+Server: 15 41 57
+Client sends: 'DATETIME'
+Server: 11 10 2026 15 41 57
+Client sends: ''
+Server: ERR UNKNOWN_COMMAND
+Client sends: 'UNKNOWN'
+Server: ERR UNKNOWN_COMMAND
+Client sends: ' date '
+Server: ERR UNKNOWN_COMMAND
+Client sends: 'QUIT'
+Server: BYE
+TCP: Nhập DATE, TIME, DATETIME hoặc QUIT:
+Client sends: 'DATE'
+Server: 11 10 2026
+Stop server while client remains active
+Client sends: 'TIME'
+TCP: Lỗi kết nối: Connection reset by peer
+
+=== UDP ===
+UDP server đang lắng nghe tại cổng 54325
+UDP: Nhập DATE, TIME hoặc DATETIME. Nhấn Ctrl+C để thoát (không dùng QUIT).
+Client sends: 'DATE'
+Server: 11 10 2026
+Client sends: 'TIME'
+Server: 15 41 58
+Client sends: 'DATETIME'
+Server: 11 10 2026 15 41 58
+Client sends: ''
+Server: ERR UNKNOWN_COMMAND
+Client sends: 'UNKNOWN'
+Server: ERR UNKNOWN_COMMAND
+Client sends: ' date '
+Server: ERR UNKNOWN_COMMAND
+Client sends: 'QUIT'
+Server: ERR UNKNOWN_COMMAND
+Stop server while client remains active
+Client sends: 'TIME'
+UDP: Hết thời gian chờ 3 giây; không nhận được phản hồi. Có thể gửi lệnh tiếp.
+UDP server đang lắng nghe tại cổng 54325
+Client sends: 'DATETIME'
+Server: 11 10 2026 15 42 01
+
+PASS: formats, unknown commands, TCP QUIT, server interruption, UDP recovery.

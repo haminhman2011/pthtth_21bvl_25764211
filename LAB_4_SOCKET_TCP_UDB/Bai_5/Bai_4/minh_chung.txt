@@ -1,0 +1,29 @@
+Calculator server đang lắng nghe tại cổng 62001
+'CALC + 100 200' -> OK 300 [PASS]
+'CALC - 100 200' -> OK -100 [PASS]
+'CALC * 1.5 2' -> OK 3 [PASS]
+'CALC / 10 4' -> OK 2.5 [PASS]
+'CALC / 10 0' -> ERR DIVIDE_BY_ZERO [PASS]
+'CALC % 10 3' -> ERR UNSUPPORTED_OPERATOR [PASS]
+'CALC + a 2' -> ERR INVALID_NUMBER [PASS]
+'CALC + 1' -> ERR INVALID_FORMAT [PASS]
+'' -> ERR INVALID_FORMAT [PASS]
+'CALC + 1 2 3' -> ERR INVALID_FORMAT [PASS]
+'calc + 1 2' -> ERR INVALID_FORMAT [PASS]
+'CALC / 1 -0.00' -> ERR DIVIDE_BY_ZERO [PASS]
+'CALC + 0.1 0.2' -> OK 0.3 [PASS]
+'CALC / 1 3' -> OK 0.3333333333333333333333333333333333 [PASS]
+'CALC + NaN 2' -> ERR INVALID_NUMBER [PASS]
+'CALC * -2 -3' -> OK 6 [PASS]
+'  CALC   +  1  2  ' -> OK 3 [PASS]
+'CALC + 1e3 2' -> OK 1002 [PASS]
+
+Actual CalculatorClient session [PASS]:
+Nhập CALC <+|-|*|/> <số 1> <số 2>. Nhập QUIT để thoát client.
+Server: OK 300
+Server: ERR DIVIDE_BY_ZERO
+Server: ERR UNSUPPORTED_OPERATOR
+Server: ERR INVALID_NUMBER
+Server: ERR INVALID_FORMAT
+Server: OK 2.5
+

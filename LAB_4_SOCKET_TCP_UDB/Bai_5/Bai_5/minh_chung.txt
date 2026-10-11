@@ -1,0 +1,33 @@
+Chat server đang lắng nghe tại cổng 59208
+'USERS' -> ERR NICK_REQUIRED [PASS]
+'NICK bad name' -> ERR INVALID_NICK [PASS]
+'NICK alice' -> OK NICK alice [PASS]
+'NICK alice' -> ERR NICK_IN_USE [PASS]
+'NICK bob' -> OK NICK bob [PASS]
+'NICK carol' -> OK NICK carol [PASS]
+'USERS' -> USERS alice bob carol [PASS]
+'MSG Xin chào Việt Nam' -> OK MSG [PASS]
+UTF-8 broadcast to both other clients; sender receives only OK MSG [PASS]
+'MSG   ' -> ERR EMPTY_MESSAGE [PASS]
+'UNKNOWN' -> ERR UNKNOWN_COMMAND [PASS]
+Concurrent broadcast: 40 complete messages, no interleaved lines, no self echo [PASS]
+Abrupt disconnect removes bob; server stays active [PASS]
+'NICK bob' -> OK NICK bob [PASS]
+'QUIT' -> BYE [PASS]
+'MSG still running' -> OK MSG [PASS]
+Nickname reuse, QUIT closes connection, continued chat [PASS]
+Concurrent nickname registration: exactly one winner [PASS]
+'QUIT' -> BYE [PASS]
+'QUIT' -> BYE [PASS]
+'QUIT' -> BYE [PASS]
+'QUIT' -> BYE [PASS]
+
+Actual ChatClient session [PASS]:
+Chọn nickname: NICK <tên>. Sau đó dùng USERS, MSG <nội dung>, QUIT.
+NICK_REQUIRED
+OK NICK tester
+USERS tester
+OK MSG
+BYE
+
+PASS: all chat checks.

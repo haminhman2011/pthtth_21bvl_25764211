@@ -1,0 +1,26 @@
+File server tại cổng 59728; upload: C:\Users\HAMINH~1\AppData\Local\Temp\bai8_file_0iam9sqi\Bai_5\Bai_8\upload
+'empty.bin', declared=0, sent=0 -> OK [PASS]
+Saved SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+'tieng-viet.txt', declared=50, sent=50 -> OK [PASS]
+Saved SHA-256: 5c27f4ca50c2b3b1f683c8604c162569810914c06540616ad2ddf36fa2e9ec5c
+'image.png', declared=68, sent=68 -> OK [PASS]
+Saved SHA-256: 5e3d382db4dd83d59aa5742793ad6b7903409e865c83bcbc54835049f043bc15
+'../outside.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+'..\\outside.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+'/absolute.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+'C:\\outside.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+'folder/file.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+'CON.txt', declared=6, sent=6 -> ERR INVALID_FILENAME [PASS]
+Traversal and absolute paths rejected; no file outside upload [PASS]
+'bad-hash.txt', declared=12, sent=12 -> ERR HASH_MISMATCH [PASS]
+'short.bin', declared=100, sent=3 -> ERR INCOMPLETE_FILE [PASS]
+'negative.bin', declared=-1, sent=0 -> ERR INVALID_SIZE [PASS]
+'huge.bin', declared=4294967296, sent=0 -> ERR INVALID_SIZE [PASS]
+'invalid-hash.bin', declared=0, sent=0 -> ERR INVALID_HASH [PASS]
+'tieng-viet.txt', declared=16, sent=16 -> ERR FILE_EXISTS [PASS]
+
+Actual FileClient session [PASS]:
+File: client-vi.txt; size: 50; SHA-256: 5c27f4ca50c2b3b1f683c8604c162569810914c06540616ad2ddf36fa2e9ec5c
+Server: OK
+
+PASS: empty, UTF-8 text, PNG, traversal, hashes, long sizes, short transfer, no EOF boundary, no overwrite, temp cleanup.

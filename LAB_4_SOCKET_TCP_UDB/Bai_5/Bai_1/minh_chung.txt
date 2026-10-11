@@ -1,0 +1,84 @@
+=== Hop le 1 - IPv4 loopback ===
+java Bai_5.bai_1.HostUriInspector 127.0.0.1 | https://example.com:8443/docs?q=java#intro
+=== THÔNG TIN HOST ===
+Hostname: 127.0.0.1
+Số địa chỉ IP: 1
+- IP: 127.0.0.1
+  Loại: IPv4
+  Loopback: true
+  Site local: false
+=== THÔNG TIN URI ===
+URI: https://example.com:8443/docs?q=java#intro
+Scheme: https
+Host: example.com
+Port: 8443
+Path: /docs
+Query: q=java
+Fragment: intro
+Exit code: 0
+
+=== Hop le 2 - IPv6 loopback ===
+java Bai_5.bai_1.HostUriInspector ::1 | http://[::1]:8080/test#ipv6
+=== THÔNG TIN HOST ===
+Hostname: ::1
+Số địa chỉ IP: 1
+- IP: 0:0:0:0:0:0:0:1
+  Loại: IPv6
+  Loopback: true
+  Site local: false
+=== THÔNG TIN URI ===
+URI: http://[::1]:8080/test#ipv6
+Scheme: http
+Host: [::1]
+Port: 8080
+Path: /test
+Query: (không có)
+Fragment: ipv6
+Exit code: 0
+
+=== Hop le 3 - IPv4 site local ===
+java Bai_5.bai_1.HostUriInspector 192.168.1.10 | https://example.com/
+=== THÔNG TIN HOST ===
+Hostname: 192.168.1.10
+Số địa chỉ IP: 1
+- IP: 192.168.1.10
+  Loại: IPv4
+  Loopback: false
+  Site local: true
+=== THÔNG TIN URI ===
+URI: https://example.com/
+Scheme: https
+Host: example.com
+Port: (không chỉ định)
+Path: /
+Query: (không có)
+Fragment: (không có)
+Exit code: 0
+
+=== Loi 1 - Thieu tham so ===
+java Bai_5.bai_1.HostUriInspector localhost
+Lỗi: Cần đúng 2 tham số: hostname và URI.
+Cách chạy: java Bai_5.bai_1.HostUriInspector <hostname> "<URI>"
+Exit code: 1
+
+=== Loi 2 - URI sai ===
+java Bai_5.bai_1.HostUriInspector localhost | http://example.com/a b
+Lỗi: URI sai cú pháp: Illegal character in path
+Vị trí lỗi: 20
+Exit code: 1
+
+=== Loi 3 - Host khong ton tai ===
+java Bai_5.bai_1.HostUriInspector no-such-host.invalid | https://example.com/
+=== THÔNG TIN HOST ===
+Hostname: no-such-host.invalid
+Lỗi: Không phân giải được hostname: no-such-host.invalid
+=== THÔNG TIN URI ===
+URI: https://example.com/
+Scheme: https
+Host: example.com
+Port: (không chỉ định)
+Path: /
+Query: (không có)
+Fragment: (không có)
+Exit code: 1
+

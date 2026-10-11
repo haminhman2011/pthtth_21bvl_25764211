@@ -1,0 +1,32 @@
+'0' -> không [PASS]
+'1' -> một [PASS]
+'2' -> hai [PASS]
+'3' -> ba [PASS]
+'4' -> bốn [PASS]
+'5' -> năm [PASS]
+'6' -> sáu [PASS]
+'7' -> bảy [PASS]
+'8' -> tám [PASS]
+'9' -> chín [PASS]
+'' -> ERR INVALID_DIGIT [PASS]
+'10' -> ERR INVALID_DIGIT [PASS]
+'a' -> ERR INVALID_DIGIT [PASS]
+' 1' -> ERR INVALID_DIGIT [PASS]
+'1 ' -> ERR INVALID_DIGIT [PASS]
+' ' -> ERR INVALID_DIGIT [PASS]
+'９' -> ERR INVALID_DIGIT [PASS]
+'QUIT' -> BYE [PASS]
+Server closes connection after QUIT [PASS]
+
+Actual DigitClient session [PASS]:
+Nhập một chữ số 0–9, hoặc QUIT để thoát:
+Server: không
+Server: chín
+Server: ERR INVALID_DIGIT
+Server: ERR INVALID_DIGIT
+Server: ERR INVALID_DIGIT
+Server: ERR INVALID_DIGIT
+Server: ERR INVALID_DIGIT
+Server: ERR INVALID_DIGIT
+Server: BYE
+

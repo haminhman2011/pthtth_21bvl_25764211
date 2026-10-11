@@ -1,0 +1,5 @@
+# bien dich
+javac -encoding UTF-8 -d . Bai_5/Bai_3/*.java
+# run source
+java Bai_5.Bai_3.TcpDateTimeServer
+java Bai_5.Bai_3.TcpDateTimeClient

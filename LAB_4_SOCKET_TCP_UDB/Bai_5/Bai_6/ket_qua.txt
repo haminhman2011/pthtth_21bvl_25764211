@@ -1,0 +1,35 @@
+BÀI 6 — THỰC NGHIỆM TCP VÀ UDP
+Thời điểm: 2026-10-11T16:13:28.586299600+07:00[Asia/Bangkok]
+OS: Windows 10 10.0 amd64
+Java: 26.0.2; JVM: Java HotSpot(TM) 64-Bit Server VM
+CPU (nếu OS cung cấp): Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+Số CPU logic JVM thấy: 8
+RAM tối đa JVM (byte): 4206886912
+Đích: IPv4 loopback 127.0.0.1; server và client cùng một JVM, hai thread, cổng tự cấp.
+Mỗi giao thức: 5 lượt đo x 1000 thông điệp; payload cố định 256 byte mỗi chiều.
+Payload: 4 byte sequence big-endian + 252 byte 'x'; không tính header TCP/UDP/IP.
+Timeout: 1000 ms cho mỗi phản hồi; TCP connect cũng 1000 ms.
+TCP: frame cố định 256 byte; đọc đủ frame; TCP_NODELAY bật ở hai đầu.
+UDP: một thông điệp/datagram; xác thực sequence và toàn bộ payload; không gửi lại; bỏ qua phản hồi trễ.
+Phương pháp: stop-and-wait (gửi một, chờ echo rồi gửi tiếp), System.nanoTime đo từ trước gửi thông điệp đầu đến khi nhận/timeout thông điệp cuối.
+Đo bao gồm tạo payload, gửi, chờ, nhận và xác thực; không bao gồm tạo socket, kết nối TCP, đóng socket hoặc ghi báo cáo.
+Warm-up: mỗi giao thức 1 lượt 1000 thông điệp, không tính kết quả; đảo thứ tự TCP/UDP ở các lượt chẵn/lẻ.
+Nếu TCP timeout/EOF/lỗi hoặc server lỗi, dừng thực nghiệm và báo lỗi, không công bố lượt dở dang như kết quả hợp lệ.
+
+Lần 1 | TCP | 97.868 ms | 1000/1000 phản hồi
+Lần 1 | UDP | 98.920 ms | 1000/1000 phản hồi
+Lần 2 | UDP | 105.156 ms | 1000/1000 phản hồi
+Lần 2 | TCP | 102.357 ms | 1000/1000 phản hồi
+Lần 3 | TCP | 99.941 ms | 1000/1000 phản hồi
+Lần 3 | UDP | 111.510 ms | 1000/1000 phản hồi
+Lần 4 | UDP | 87.829 ms | 1000/1000 phản hồi
+Lần 4 | TCP | 93.058 ms | 1000/1000 phản hồi
+Lần 5 | TCP | 96.348 ms | 1000/1000 phản hồi
+Lần 5 | UDP | 102.230 ms | 1000/1000 phản hồi
+
+TCP: mean 97.914 ms; median 97.868 ms; min 93.058 ms; max 102.357 ms; phản hồi 5000/5000.
+UDP: mean 101.129 ms; median 102.230 ms; min 87.829 ms; max 111.510 ms; phản hồi 5000/5000.
+Trong đợt đo này, median TCP = 97.868 ms, UDP = 102.230 ms. TCP có median thấp hơn.
+Kết quả chỉ áp dụng cho môi trường và phương pháp hiện tại; không chứng minh UDP luôn nhanh hơn TCP.
+Đây là đo echo tuần tự trên localhost, không phải phép đo thông lượng gửi đồng thời hoặc thử mất gói trên mạng thực.
+So sánh thời gian phải đi kèm số phản hồi; chạy thiếu phản hồi không có cùng mức hoàn thành công việc.

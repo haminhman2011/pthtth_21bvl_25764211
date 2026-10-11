@@ -1,0 +1,129 @@
+BÀI 9 — MULTICAST THÔNG BÁO
+OS: nt
+Selected interface: loopback_0
+Group: 239.255.0.1; TTL=1; multicast loopback enabled
+Method: 2 Java receiver processes; 1 Java sender; UTF-8; timeout 3000 ms.
+
+Interface inventory:
+name=ethernet_0; index=8; display=Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_1; index=29; display=VMware Virtual Ethernet Adapter for VMnet1-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_2; index=30; display=Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_3; index=31; display=VMware Virtual Ethernet Adapter for VMnet8-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_4; index=32; display=TAP-Windows Adapter V9-WFP Native MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=ethernet_5; index=33; display=TAP-Windows Adapter V9-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=ethernet_6; index=34; display=TAP-Windows Adapter V9-QoS Packet Scheduler-0000; up=false; multicast=true; loopback=false
+name=ethernet_7; index=28; display=Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_8; index=42; display=Intel(R) Ethernet Connection (5) I219-LM-WFP Native MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=ethernet_9; index=43; display=Intel(R) Ethernet Connection (5) I219-LM-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=ethernet_10; index=44; display=Intel(R) Ethernet Connection (5) I219-LM-QoS Packet Scheduler-0000; up=false; multicast=true; loopback=false
+name=ethernet_11; index=45; display=Intel(R) Ethernet Connection (5) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=ethernet_12; index=35; display=Hyper-V Virtual Ethernet Adapter #2-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_13; index=36; display=Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=ethernet_14; index=46; display=Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_15; index=53; display=TAP-Windows Adapter V9-WFP 802.3 MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=ethernet_16; index=75; display=Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_17; index=76; display=Hyper-V Virtual Ethernet Adapter-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_18; index=77; display=Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=ethernet_19; index=78; display=Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_20; index=62; display=WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_21; index=63; display=WAN Miniport (IP)-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_22; index=64; display=WAN Miniport (IP)-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=ethernet_23; index=65; display=WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_24; index=66; display=WAN Miniport (IPv6)-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_25; index=67; display=WAN Miniport (IPv6)-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=ethernet_26; index=68; display=WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=ethernet_27; index=69; display=WAN Miniport (Network Monitor)-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=ethernet_28; index=70; display=WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=ethernet_32768; index=5; display=Microsoft Kernel Debug Network Adapter; up=false; multicast=true; loopback=false
+name=ethernet_32769; index=4; display=Hyper-V Virtual Switch Extension Adapter; up=true; multicast=true; loopback=false
+name=ethernet_32770; index=7; display=Intel(R) Ethernet Connection (5) I219-LM; up=false; multicast=true; loopback=false
+  fe80:0:0:0:ddc4:fca8:bb3f:9d71%ethernet_32770
+  169.254.101.192
+name=ethernet_32771; index=22; display=WAN Miniport (IP); up=true; multicast=true; loopback=false
+name=ethernet_32772; index=9; display=WAN Miniport (IPv6); up=true; multicast=true; loopback=false
+name=ethernet_32773; index=10; display=WAN Miniport (Network Monitor); up=true; multicast=true; loopback=false
+name=ethernet_32774; index=20; display=Hyper-V Virtual Ethernet Adapter; up=true; multicast=true; loopback=false
+  fe80:0:0:0:a725:57d9:cbd0:780b%ethernet_32774
+  172.17.176.1
+name=ethernet_32775; index=11; display=TAP-Windows Adapter V9; up=false; multicast=true; loopback=false
+  fe80:0:0:0:570a:8469:e925:3fb0%ethernet_32775
+name=ethernet_32776; index=24; display=VMware Virtual Ethernet Adapter for VMnet1; up=true; multicast=true; loopback=false
+  fe80:0:0:0:4ad5:d667:1d35:c904%ethernet_32776
+  192.168.134.1
+name=ethernet_32777; index=26; display=Bluetooth Device (Personal Area Network); up=false; multicast=true; loopback=false
+name=ethernet_32778; index=15; display=VMware Virtual Ethernet Adapter for VMnet8; up=true; multicast=true; loopback=false
+  fe80:0:0:0:b43b:dfe6:772c:867b%ethernet_32778
+  192.168.10.1
+name=ethernet_32779; index=52; display=Hyper-V Virtual Switch Extension Adapter #2; up=true; multicast=true; loopback=false
+name=ethernet_32780; index=74; display=Hyper-V Virtual Ethernet Adapter #2; up=true; multicast=true; loopback=false
+  fe80:0:0:0:31ec:ef3d:84f6:f69f%ethernet_32780
+  172.26.96.1
+name=ppp_32768; index=25; display=WAN Miniport (PPPOE); up=false; multicast=true; loopback=false
+name=ppp_32769; index=23; display=RAS Async Adapter; up=false; multicast=true; loopback=false
+name=loopback_0; index=1; display=Software Loopback Interface 1; up=true; multicast=true; loopback=true
+  0:0:0:0:0:0:0:1
+  127.0.0.1
+name=iftype53_0; index=37; display=TAP-Windows Adapter V9 for OpenVPN Connect-WFP Native MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=iftype53_1; index=38; display=TAP-Windows Adapter V9 for OpenVPN Connect-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=iftype53_2; index=39; display=TAP-Windows Adapter V9 for OpenVPN Connect-QoS Packet Scheduler-0000; up=false; multicast=true; loopback=false
+name=iftype53_3; index=40; display=OpenVPN Data Channel Offload-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=iftype53_4; index=41; display=TAP-Windows Adapter V9 for OpenVPN Connect-WFP 802.3 MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=iftype53_32768; index=21; display=TAP-Windows Adapter V9 for OpenVPN Connect; up=false; multicast=true; loopback=false
+  fe80:0:0:0:7fa3:fd80:9785:26a2%iftype53_32768
+name=iftype53_32769; index=19; display=OpenVPN Data Channel Offload; up=false; multicast=true; loopback=false
+  fe80:0:0:0:24b4:1ec6:76e2:61d7%iftype53_32769
+name=wireless_0; index=54; display=Intel(R) Dual Band Wireless-AC 8260-WFP Native MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=wireless_1; index=55; display=Intel(R) Dual Band Wireless-AC 8260-Virtual WiFi Filter Driver-0000; up=true; multicast=true; loopback=false
+name=wireless_2; index=56; display=Intel(R) Dual Band Wireless-AC 8260-Native WiFi Filter Driver-0000; up=true; multicast=true; loopback=false
+name=wireless_3; index=57; display=Intel(R) Dual Band Wireless-AC 8260-Npcap Packet Driver (NPCAP)-0000; up=true; multicast=true; loopback=false
+name=wireless_4; index=58; display=Intel(R) Dual Band Wireless-AC 8260-QoS Packet Scheduler-0000; up=true; multicast=true; loopback=false
+name=wireless_5; index=59; display=Intel(R) Dual Band Wireless-AC 8260-WFP 802.3 MAC Layer LightWeight Filter-0000; up=true; multicast=true; loopback=false
+name=wireless_6; index=60; display=Microsoft Wi-Fi Direct Virtual Adapter #3-WFP Native MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=wireless_7; index=61; display=Microsoft Wi-Fi Direct Virtual Adapter #3-Native WiFi Filter Driver-0000; up=false; multicast=true; loopback=false
+name=wireless_8; index=71; display=Microsoft Wi-Fi Direct Virtual Adapter #3-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=wireless_9; index=72; display=Microsoft Wi-Fi Direct Virtual Adapter #3-QoS Packet Scheduler-0000; up=false; multicast=true; loopback=false
+name=wireless_10; index=73; display=Microsoft Wi-Fi Direct Virtual Adapter #3-WFP 802.3 MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=wireless_11; index=47; display=Microsoft Wi-Fi Direct Virtual Adapter #4-WFP Native MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=wireless_12; index=48; display=Microsoft Wi-Fi Direct Virtual Adapter #4-Native WiFi Filter Driver-0000; up=false; multicast=true; loopback=false
+name=wireless_13; index=49; display=Microsoft Wi-Fi Direct Virtual Adapter #4-Npcap Packet Driver (NPCAP)-0000; up=false; multicast=true; loopback=false
+name=wireless_14; index=50; display=Microsoft Wi-Fi Direct Virtual Adapter #4-QoS Packet Scheduler-0000; up=false; multicast=true; loopback=false
+name=wireless_15; index=51; display=Microsoft Wi-Fi Direct Virtual Adapter #4-WFP 802.3 MAC Layer LightWeight Filter-0000; up=false; multicast=true; loopback=false
+name=wireless_32771; index=27; display=Intel(R) Dual Band Wireless-AC 8260; up=true; multicast=true; loopback=false
+  fe80:0:0:0:991f:9df5:298b:f5e5%wireless_32771
+  192.168.137.193
+name=wireless_32772; index=14; display=Microsoft Wi-Fi Direct Virtual Adapter #3; up=false; multicast=true; loopback=false
+  fe80:0:0:0:6ea:4664:2c33:2b45%wireless_32772
+name=wireless_32773; index=16; display=Microsoft Wi-Fi Direct Virtual Adapter #4; up=false; multicast=true; loopback=false
+  fe80:0:0:0:4072:ba7d:8f6d:375f%wireless_32773
+name=tunnel_32512; index=17; display=Microsoft Teredo Tunneling Adapter; up=false; multicast=true; loopback=false
+name=tunnel_32513; index=6; display=Microsoft IP-HTTPS Platform Adapter; up=false; multicast=true; loopback=false
+name=tunnel_32514; index=2; display=Microsoft 6to4 Adapter; up=false; multicast=true; loopback=false
+name=tunnel_32768; index=18; display=WAN Miniport (SSTP); up=false; multicast=true; loopback=false
+name=tunnel_32769; index=13; display=WAN Miniport (IKEv2); up=false; multicast=true; loopback=false
+name=tunnel_32770; index=12; display=WAN Miniport (L2TP); up=false; multicast=true; loopback=false
+name=tunnel_32771; index=3; display=WAN Miniport (PPTP); up=false; multicast=true; loopback=false
+
+R1: JOINED 239.255.0.1:59341; interface=loopback_0; index=1; timeout=3000 ms
+R2: JOINED 239.255.0.1:59341; interface=loopback_0; index=1; timeout=3000 ms
+Sender: Sender -> 239.255.0.1:59341; interface=loopback_0; TTL=1; multicast loopback=true
+Sender: Nhập thông báo; QUIT để thoát sender (không gửi QUIT).
+Sender: SENT 22 byte: Thông báo phòng lab
+Sender: SENT 19 byte: Multicast message 2
+Sender: SENT 26 byte: Kết thúc thử nghiệm
+R1: RECEIVED 1 from /127.0.0.1:59342: Thông báo phòng lab
+R1: RECEIVED 2 from /127.0.0.1:59342: Multicast message 2
+R1: RECEIVED 3 from /127.0.0.1:59342: Kết thúc thử nghiệm
+R1: TOTAL 3
+R1: LEFT 239.255.0.1; interface=loopback_0
+R2: RECEIVED 1 from /127.0.0.1:59342: Thông báo phòng lab
+R2: RECEIVED 2 from /127.0.0.1:59342: Multicast message 2
+R2: RECEIVED 3 from /127.0.0.1:59342: Kết thúc thử nghiệm
+R2: TOTAL 3
+R2: LEFT 239.255.0.1; interface=loopback_0
+PASS: 2 receivers each received all 3 messages and left group before socket close.
+Idle: JOINED 239.255.0.1:59341; interface=loopback_0; index=1; timeout=500 ms
+Idle: TIMEOUT: Không nhận được trong 500 ms; kiểm tra interface, Wi-Fi, VPN hoặc firewall.
+Idle: TOTAL 0
+Idle: LEFT 239.255.0.1; interface=loopback_0
+PASS: no-sender timeout reported; group left on timeout exit.
+No live Wi-Fi/VPN/firewall block was induced. A timeout alone does not prove its cause; lab troubleshooting is in README.md.

@@ -1,0 +1,58 @@
+BÀI 10 — UDP DISCOVERY + TCP SERVICE
+Interface: loopback_0
+UDP group: 239.255.0.1; discovery window: 1200 ms; 3 queries per window.
+Two server processes, same UDP port, different TCP ports.
+READY SERVICE LabA 59930 1.0; UDP=50438; group=239.255.0.1; interface=loopback_0
+READY SERVICE LabB 59931 1.0; UDP=50438; group=239.255.0.1; interface=loopback_0
+
+Client session:
+DISCOVERING group=239.255.0.1:50438; interface=loopback_0; timeout=1200 ms
+DISCOVERY_DONE duplicates=4; invalid=0
+FOUND 2 service(s)
+1. LabA 127.0.0.1:59930 version=1.0
+2. LabB 127.0.0.1:59931 version=1.0
+Chọn số server để kết nối TCP, hoặc QUIT để thoát:
+TCP_CONNECTED 127.0.0.1:59930
+Server: WELCOME LabA 1.0
+Nhập TIME, ECHO <nội dung>, QUIT:
+Server: OK Xin chào Việt Nam
+Server: OK 2026-10-11T16:48:28.794753+07:00
+Server: BYE
+
+Wall time including JVM startup: 1.406 s
+
+Client session:
+DISCOVERING group=239.255.0.1:50438; interface=loopback_0; timeout=1200 ms
+DISCOVERY_DONE duplicates=4; invalid=0
+FOUND 2 service(s)
+1. LabA 127.0.0.1:59930 version=1.0
+2. LabB 127.0.0.1:59931 version=1.0
+Chọn số server để kết nối TCP, hoặc QUIT để thoát:
+TCP_CONNECTED 127.0.0.1:59931
+Server: WELCOME LabB 1.0
+Nhập TIME, ECHO <nội dung>, QUIT:
+Server: OK Xin chào Việt Nam
+Server: OK 2026-10-11T16:48:30.159320200+07:00
+Server: BYE
+
+Wall time including JVM startup: 1.363 s
+PASS: two servers displayed once each; duplicates removed; both TCP services selectable; source IP used; UTF-8 ECHO/TIME/QUIT.
+
+Client session:
+DISCOVERING group=239.255.0.1:50438; interface=loopback_0; timeout=1200 ms
+DISCOVERY_DONE duplicates=0; invalid=0
+FOUND 0 service(s)
+Không có phản hồi trong timeout; kiểm tra interface, server, VPN hoặc firewall.
+
+Wall time including JVM startup: 1.317 s
+PASS: no-server timeout ends discovery with zero services.
+
+Client session:
+DISCOVERING group=239.255.0.1:50438; interface=loopback_0; timeout=1200 ms
+DISCOVERY_DONE duplicates=0; invalid=15
+FOUND 0 service(s)
+Không có phản hồi trong timeout; kiểm tra interface, server, VPN hoặc firewall.
+
+Wall time including JVM startup: 1.329 s
+PASS: malformed, invalid-port and invalid-UTF-8 replies rejected.
+PASS: discovery and TCP integration checks.
