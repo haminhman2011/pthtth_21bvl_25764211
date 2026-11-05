@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": ["."],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.debug.settings.vmArgs": "--enable-native-access=ALL-UNNAMED"
+}
